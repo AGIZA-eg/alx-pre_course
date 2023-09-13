@@ -1,28 +1,3 @@
-If you are a tech freak or have been around the development industry for some time, you must have come across the term “REST API.” The invention of API or Application Programming Interfaces transformed the way the software works as it is now the building block of [modern software engineering](https://radixweb.com/services/software-engineering "modern software engineering").
-
-There is still a lot to explore in the world of [REST or RESTful APIs](https://radixweb.com/blog/rest-vs-restful-api) and that is exactly what we are going to talk about in this article - how to create a REST API with the Django REST framework.
-
-For anyone who is looking to get into the field of web [API development](https://radixweb.com/services/api-development "API development") or loves building APIs in Python, the Django REST Framework is the most sought-after tool they should look for. It has a suite of built-in features for almost any common task, enabling developers to focus on the core project instead of reinventing the wheel.
-
-So, without further ado, let’s use the Django REST framework and get your first REST API up and running!
-
-On This Page
-
-1.  [What is Django REST Framework (DRF)?](https://radixweb.com/blog/create-rest-api-using-django-rest-framework#Framework)
-2.  [Why Should You Use the Django REST Framework?](https://radixweb.com/blog/create-rest-api-using-django-rest-framework#Use)
-3.  [Things to Know Before You Create a REST API in Django](https://radixweb.com/blog/create-rest-api-using-django-rest-framework#Create)
-4.  [Things to Do While Building a REST API with Django REST Framework](https://radixweb.com/blog/create-rest-api-using-django-rest-framework#Building)
-5.  [Steps to Create a REST API Using Django REST Framework](https://radixweb.com/blog/create-rest-api-using-django-rest-framework#Steps)
-6.  [Over to You](https://radixweb.com/blog/create-rest-api-using-django-rest-framework#Over)
-
-## What is Django REST Framework (DRF)?
-
-Django REST Framework is a Python-based toolkit for creating a web and REST API in Django components. It offers a range of features for seamless [web development with Django](https://radixweb.com/blog/what-is-django "web development with Django"), such as HTTP and application middleware, templates, forms, Model–View–Controller (MVP) architecture, security, data views, database management, caching, and so on.
-
-The flexibility and efficiency DRF comes with are unparallel. Some of the big companies using this Django API Framework are Red Hat, Pinterest, Instagram, and Mozilla.
-
-Using only a single command, you can install this REST API development framework with the pip package management of Python.
-
 ## Why Should You Use the Django REST Framework?
 
 The Django REST Framework is the perfect web API development tool for “perfectionists with deadlines.”
