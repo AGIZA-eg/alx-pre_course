@@ -1,5 +1,3 @@
-# Untitled
-
 ## 1) What is an API?
 
 # Application Programming Interfaces (APIs)
