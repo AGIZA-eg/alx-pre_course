@@ -10,9 +10,6 @@ Customizability is another option that DRF offers; meaning, you can use general 
 
 Most important, it is based on Python – inarguably the most favorite programming language of all developers alike!
 
-> #### Scale up Your Software Development Game by Unlocking the Power of Python
-> 
-> [Let's Begin](https://radixweb.com/python-development "Let's Begin")
 
 ## Things to Know Before You Create a REST API in Django
 
@@ -86,12 +83,6 @@ So, in order to create a Django app, we have to create a Django project first. L
 We are now creating the Django app called `healthapp`.
 
 `django-admin startapp healthapp   `
-
-  
-
-> #### Give an Edge to Your Business with Innovative Python Software Solutions
-> 
-> [Connect with Experts](https://radixweb.com/hire-python-developers "Connect with Experts")
 
 ### 4\. Registering the Settings of the App Project and APP URLs
 
@@ -246,7 +237,3 @@ After you are done, use [http://127.0.0.1:8000/](http://127.0.0.1:8000/) to navi
 > #### Harness the Power of the Django Web Framework to Supercharge Your Dev Project
 > 
 > [Get It Done](https://radixweb.com/hire-django-developers)
-
-> Over to YouThat's all, then! As you can see, it is not an impossible task to set up the Django REST Framework and create REST APIs. With very little code, we created an API that works perfectly. Using the built-in browsable API, we tested it out as well.And this is just the tip of the iceberg. If you want to learn more about the framework, you should absolutely look over the [extensive documentation and tutorials](https://www.django-rest-framework.org/community/tutorials-and-resources/ "extensive documentation and tutorial") posted on DRF's website, as suggested by our [Django dev team](https://radixweb.com/django-development "Django dev team").Additionally, there is [a django blog repository](https://github.com/olegkovalov/django_blog "a django blog repository") that you can surf for any kind of suggestions or ideas. However, if you are familiar with the fundamentals, you have a long way to go. Because the world of APIs is so versatile, you will find it easy to work with any kind of product, paving your path to becoming a valuable team member and a vetted software development soldier!
-
-A master communicator and strategist, Nihar Raval renders his services as AVP of Sales at Radixweb. Here he leads sales service verticals across geo-locations ranging from enterprise application development to performance assessment to enterprise mobility solutions to cloud migration strategies and much more. With a keen focus on .Net Core and Open Source Technologies like PHP, including Scripting Languages like React JS, Angular JS , Node JS, Nihar doubles up as a seasoned IT sales and consultation professional. He is passionate about everything tech, and this drive is clearly visible in his approach towards client management and achieving customer success through the creation of innovative tech solutions. In his free time, Nihar enjoys a good informative read and loves watching and playing multiple sports .
