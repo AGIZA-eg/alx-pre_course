@@ -1,3 +1,26 @@
+## How to create rest api using django rest framework
+
+There is still a lot to explore in the world of [REST or RESTful APIs](https://radixweb.com/blog/rest-vs-restful-api) and that is exactly what we are going to talk about in this article - how to create a REST API with the Django REST framework.
+
+So, without further ado, let’s use the Django REST framework and get your first REST API up and running!
+
+On This Page
+
+1. [What is Django REST Framework (DRF)?](https://radixweb.com/blog/create-rest-api-using-django-rest-framework#Framework)
+2. [Why Should You Use the Django REST Framework?](https://radixweb.com/blog/create-rest-api-using-django-rest-framework#Use)
+3. [Things to Know Before You Create a REST API in Django](https://radixweb.com/blog/create-rest-api-using-django-rest-framework#Create)
+4. [Things to Do While Building a REST API with Django REST Framework](https://radixweb.com/blog/create-rest-api-using-django-rest-framework#Building)
+5. [Steps to Create a REST API Using Django REST Framework](https://radixweb.com/blog/create-rest-api-using-django-rest-framework#Steps)
+6. [Over to You](https://radixweb.com/blog/create-rest-api-using-django-rest-framework#Over)
+
+## What is Django REST Framework (DRF)?
+
+Django REST Framework is a Python-based toolkit for creating a web and REST API in Django components. It offers a range of features for seamless [web development with Django](https://radixweb.com/blog/what-is-django), such as HTTP and application middleware, templates, forms, Model–View–Controller (MVP) architecture, security, data views, database management, caching, and so on.
+
+The flexibility and efficiency DRF comes with are unparallel. Some of the big companies using this Django API Framework are Red Hat, Pinterest, Instagram, and Mozilla.
+
+Using only a single command, you can install this REST API development framework with the pip package management of Python.
+
 ## Why Should You Use the Django REST Framework?
 
 The Django REST Framework is the perfect web API development tool for “perfectionists with deadlines.”
@@ -10,81 +33,78 @@ Customizability is another option that DRF offers; meaning, you can use general 
 
 Most important, it is based on Python – inarguably the most favorite programming language of all developers alike!
 
-
 ## Things to Know Before You Create a REST API in Django
 
 If you want to build API with Django for the first time, here are a number of things you should keep in mind:
 
--   You can only connect to third-party APIs. You have no control over them. Hence, if original developers change them, you have to modify your code as well.
--   The request/response cycle of APIs is usually slow without caching. You must have a cache setup to speed it up.
--   Although APIs need authentication, you should always use high-security measures and keep all critical data out of public repositories.
--   The number of requests your API can process each hour is limited. Hence, note the number to avoid an overload of requests.
--   Document each and everything since it’s hard to directly search for a particular code in the source code.
+- You can only connect to third-party APIs. You have no control over them. Hence, if original developers change them, you have to modify your code as well.
+- The request/response cycle of APIs is usually slow without caching. You must have a cache setup to speed it up.
+- Although APIs need authentication, you should always use high-security measures and keep all critical data out of public repositories.
+- The number of requests your API can process each hour is limited. Hence, note the number to avoid an overload of requests.
+- Document each and everything since it’s hard to directly search for a particular code in the source code.
 
 ## Things to Do While Building a REST API with Django REST Framework
 
 There are a few basic rules our developers follow when they program or build REST APIs with Django REST Framework. You might do the same for the most optimal results:
 
--   Carefully handle trailing slashes
--   Use plural resource nouns without any verbs
--   403 Forbidden and 401 Unauthorized are different
--   Error details should be returned to the response body
--   Fully utilize 202 Accepted
--   Pay attention to generated status codes
--   For pagination and filtering, use the query string
--   Never nest resources
+- Carefully handle trailing slashes
+- Use plural resource nouns without any verbs
+- 403 Forbidden and 401 Unauthorized are different
+- Error details should be returned to the response body
+- Fully utilize 202 Accepted
+- Pay attention to generated status codes
+- For pagination and filtering, use the query string
+- Never nest resources
 
-Let's go through a step-by-step process of building a powerful REST API with Django REST Framework:
+Let’s go through a step-by-step process of building a powerful REST API with Django REST Framework:
 
-### 1\. Prerequisites
+### 1. Prerequisites
 
 Execute the following command to check if you have Python installed in your system:
 
-`python --version   `
+`python --version`
 
-If not, download and install the [latest version of Python](https://www.python.org/downloads/release/python-3110/ "latest version of Python").
+If not, download and install the [latest version of Python](https://www.python.org/downloads/release/python-3110/).
 
 After that, run another command in the command prompt to check if the Django web framework is installed or not:
 
-`django-admin --version   `
+`django-admin --version`
 
 Again, if you don’t have it, start the installation process of Django.
 
-### 2\. Install Django REST Framework
+### 2. Install Django REST Framework
 
 The first real step is the Django REST Framework setup.
 
 To isolate dependencies, it would be great if you could build a virtual environment. But you can skip this step as well. From inside your projects folder, you can execute the below-mentioned command to create the virtual environment:
 
-`python -m venv django env   `
+`python -m venv django env`
 
 Then, to activate it, run:
 
-`source./django env/bin/activate   `
+`source./django env/bin/activate`
 
-Do not forget that each time you open a new terminal session, you must restart your virtual environment. The environment's name will start to appear in the shell prompt after it is enabled.
+Do not forget that each time you open a new terminal session, you must restart your virtual environment. The environment’s name will start to appear in the shell prompt after it is enabled.
 
 It’s time to use the following commands in your terminal to navigate to an empty folder and install Django REST framework:
 
-`pip install django_rest_framework   `
+`pip install django_rest_framework`
 
-  
-
-### 3\. Creating a Django App
+### 3. Creating a Django App
 
 The steps outlined here will show you how to build a health raking application that gathers and analyzes the health data of patients. Users can interact with the data by sending requests to the API, which will retrieve them from a database.
 
-You don't need to install an additional database because Django apps come with an SQLite database.
+You don’t need to install an additional database because Django apps come with an SQLite database.
 
 So, in order to create a Django app, we have to create a Django project first. Let’s call it `app`. Run this command:
 
-`django-admin startproject app   `
+`django-admin startproject app`
 
 We are now creating the Django app called `healthapp`.
 
-`django-admin startapp healthapp   `
+`django-admin startapp healthapp`
 
-### 4\. Registering the Settings of the App Project and APP URLs
+### 4. Registering the Settings of the App Project and APP URLs
 
 In the `INSTALLED_APPS` file, you need to register the `healthapp` as well as the Django REST Framework in the project settings. This is an important step as Django won’t recognize your app without registration.
 
@@ -98,9 +118,7 @@ Now, as shown below, you have to register the app URLs of `healthapp` in the `ur
 
 `urlpatterns = [   path('admin/', admin.site.urls),   path('', include(healthapp.urls')),   ]`
 
-  
-
-### 5\. Creating a REST API View
+### 5. Creating a REST API View
 
 In order to prevent errors, add a dummy view to the `views.py` file of the app. From the Django REST framework, you first have to import the `@apiview` decorator and `Response` object.
 
@@ -110,9 +128,7 @@ This is because `@apiview` displays the API while `Response` returns sterilized 
 
 `# Create your views here.   @api_view(['GET'])   def getData(request):   return Response()`
 
-  
-
-### 6\. Building a URL Path for the App
+### 6. Building a URL Path for the App
 
 Now for the Django REST Framework API view, you need to build a URL path. Here’s the endpoint representing the `newapp` data.
 
@@ -120,9 +136,7 @@ Now for the Django REST Framework API view, you need to build a URL path. Here�
 
 `urlpatterns = [   path('', views.getData),   path('post/', views.postData),   ]`
 
-  
-
-### 7\. Creating a Model for the App
+### 7. Creating a Model for the App
 
 The name of the model class of our app is `Data` and this is how it should look:
 
@@ -130,31 +144,33 @@ The name of the model class of our app is `Data` and this is how it should look:
 
 `# Create your models here.   class Data(models.Model):   name = models.CharField(max_length=200)   description = models.CharField(max_length=500)`
 
-Now in the `admin.py` file, you need to register the model. Here's how:
+Now in the `admin.py` file, you need to register the model. Here’s how:
 
 `from django.contrib import admin   from .models import Data`
 
 `# Register your models here.   admin.site.register(Data)`
 
-  
-
-### 8\. Migrating the App
+### 8. Migrating the App
 
 At this stage, we have to create tables in the SQLite database by making migrations. Run the command:
 
-`python manage.py makemigrations healthapp   `
+`python manage.py makemigrations healthapp`
 
 Now run another command to implement those migrations:
 
 If you are successful at migrating the app, the data will create tables for the `healthapp app`. And it should look like this:
 
-![Data Table for Healthapp](https://d2ms8rpfqc4h24.cloudfront.net/1_6386292ed6.jpg)
+![https://d2ms8rpfqc4h24.cloudfront.net/1_6386292ed6.jpg](https://d2ms8rpfqc4h24.cloudfront.net/1_6386292ed6.jpg)
 
-> #### Develop Resilient Architecture for Your Software Solution with our Backend Dev Experts
+Data Table for Healthapp
+
+> Develop Resilient Architecture for Your Software Solution with our Backend Dev Experts
+> 
 > 
 > [Get Started](https://radixweb.com/backend-development)
+> 
 
-### 9\. Adding Data to the Database
+### 9. Adding Data to the Database
 
 Data entry into the database should be done using the Django admin GUI. To view and manage the data in your application, Django admin features a powerful interface.
 
@@ -162,7 +178,7 @@ And if you want to manually enter data into the database, you can utilize the Py
 
 To create our REST API, we are going to set up and use the Django admin interface. Run:
 
-`python manage.py createsuperuser   `
+`python manage.py createsuperuser`
 
 You then have to enter your email address, username, and password once prompted. And here’s the link to open the admin page after that:
 
@@ -170,17 +186,21 @@ You then have to enter your email address, username, and password once prompted.
 
 This is how the login page looks:
 
-![Login Page](https://d2ms8rpfqc4h24.cloudfront.net/2_b0c288a07a.jpg)
+![https://d2ms8rpfqc4h24.cloudfront.net/2_b0c288a07a.jpg](https://d2ms8rpfqc4h24.cloudfront.net/2_b0c288a07a.jpg)
+
+Login Page
 
 After logging in, there you will see Groups and Users model in the Django administration interface. Those are for authentication, and you will find the Data model right below them.
 
-![Django Administration Data Model](https://d2ms8rpfqc4h24.cloudfront.net/3_eeef110355.jpg)
+![https://d2ms8rpfqc4h24.cloudfront.net/3_eeef110355.jpg](https://d2ms8rpfqc4h24.cloudfront.net/3_eeef110355.jpg)
+
+Django Administration Data Model
 
 From the admin page, we can delete or add types of data, such as blood sugar level, heart rate, blood pressure, etc., from the database.
 
 Finally, it’s time to create a REST API.
 
-### 10\. Serializing the Model
+### 10. Serializing the Model
 
 To enable APIs to read data more easily, `serializers` transform complex Django models into JSON objects.
 
@@ -194,7 +214,7 @@ The `ModelSerializer` class is the base class for the `DataSerializer` class, wh
 
 After that, define the fields you need to integrate into the API and the Data model to serialize.
 
-### 11\. Updating the View
+### 11. Updating the View
 
 Using the `serializers` and Data models, we now have to update the API view.
 
@@ -206,34 +226,44 @@ Specify a GET method first, using `Data.Objects.all()` to retrieve all the data 
 
 [https://127.0.0.1:8000/](https://127.0.0.1:8000/) - navigate to this link and you will see that the API is displaying the data from the database:
 
-![API Display in Data](https://d2ms8rpfqc4h24.cloudfront.net/4_08d53846af.jpg)
+![https://d2ms8rpfqc4h24.cloudfront.net/4_08d53846af.jpg](https://d2ms8rpfqc4h24.cloudfront.net/4_08d53846af.jpg)
+
+API Display in Data
 
 Well, you just created a REST API!
 
-### 12\. Adding Data with POST
+### 12. Adding Data with POST
 
 Now you need to check if you can add data to the database using the REST API.
 
 Execute the below command to specify a POST method in the view:
 
-`@api_view(['POST'])   def postData(request):   serializer = DataSerializer(data=request.data)   if serializer.is_valid():   serializer.save()   return Response(serializer.data)   `
+`@api_view(['POST'])   def postData(request):   serializer = DataSerializer(data=request.data)   if serializer.is_valid():   serializer.save()   return Response(serializer.data)`
 
 Build an endpoint for the API POST feature by adding a path in the `urls.py` file:
 
-`urlpatterns = [   path('',views.getData),   path('post/',views.postData),   ]   `
+`urlpatterns = [   path('',views.getData),   path('post/',views.postData),   ]`
 
 After that, navigate to [https://127.0.0.1:8000/post](https://127.0.0.1:8000/post) and you will see the POST endpoint. In the Content section, add JSON format data to the database and click on the POST option. Here we have added a new data type with the following structure:
 
-`{ "component":"vitamins", "factor":"Nutrient level" }   `
+`{ "component":"vitamins", "factor":"Nutrient level" }`
 
 The data then will be shown in red in JSON format:
 
-![Data in JSON Format](https://d2ms8rpfqc4h24.cloudfront.net/5_4a567f6aa8.jpg)
+![https://d2ms8rpfqc4h24.cloudfront.net/5_4a567f6aa8.jpg](https://d2ms8rpfqc4h24.cloudfront.net/5_4a567f6aa8.jpg)
+
+Data in JSON Format
 
 After you are done, use [http://127.0.0.1:8000/](http://127.0.0.1:8000/) to navigate back to the GET endpoint. It will show the component as well as the factor.
 
-![Data with POST](https://d2ms8rpfqc4h24.cloudfront.net/4_3b260c8d46.jpg)
+![https://d2ms8rpfqc4h24.cloudfront.net/4_3b260c8d46.jpg](https://d2ms8rpfqc4h24.cloudfront.net/4_3b260c8d46.jpg)
 
-> #### Harness the Power of the Django Web Framework to Supercharge Your Dev Project
-> 
-> [Get It Done](https://radixweb.com/hire-django-developers)
+Data with POST
+
+Harness the Power of the Django Web Framework to Supercharge Your Dev Project
+
+Get It Done
+
+> Resources
+[https://radixweb.com/hire-django-developers](https://radixweb.com/hire-django-developers)
+>
