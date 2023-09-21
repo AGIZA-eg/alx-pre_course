@@ -11,11 +11,9 @@ In this tutorial we are going to explore the specifics of JWT authentication. If
     -   [Obtain Token](#obtain-token)
     -   [Refresh Token](#refresh-token)
 -   [What’s The Point of The Refresh Token?](#whats-the-point-of-the-refresh-token)
--   [Further Reading](#further-reading)
 
-___
 
-#### How JWT Works?
+## How JWT Works?
 
 The JWT is just an authorization token that should be included in all requests:
 
@@ -53,7 +51,7 @@ signature = Ju70kdcaHKn1Qaz8H42zrOYk0Jx9kIckTn9Xx7vhikY
 
 This information is encoded using Base64. If we decode, we will see something like this:
 
-**header**
+### header
 
 ```
 {
@@ -62,7 +60,7 @@ This information is encoded using Base64. If we decode, we will see something li
 }
 ```
 
-**payload**
+### payload
 
 ```
 {
@@ -73,13 +71,12 @@ This information is encoded using Base64. If we decode, we will see something li
 }
 ```
 
-**signature**
+### signature
 
 The signature is issued by the JWT backend, using the header base64 + payload base64 + `SECRET_KEY`. Upon each request this signature is verified. If any information in the header or in the payload was changed by the client it will invalidate the signature. The only way of checking and validating the signature is by using your application’s `SECRET_KEY`. Among other things, that’s why you should always keep your `SECRET_KEY` **secret**!
 
-___
 
-#### Installation & Setup
+## Installation & Setup
 
 For this tutorial we are going to use the [`djangorestframework_simplejwt`](https://github.com/davesque/django-rest-framework-simplejwt) library, recommended by the DRF developers.
 
@@ -110,9 +107,8 @@ urlpatterns = [
 ]
 ```
 
-___
 
-#### Example Code
+## Example Code
 
 For this tutorial I will use the following route and API view:
 
@@ -143,9 +139,7 @@ urlpatterns = [
 ]
 ```
 
-___
-
-#### Usage
+## Usage
 
 I will be using [HTTPie](https://httpie.org/) to consume the API endpoints via the terminal. But you can also use [cURL](https://curl.haxx.se/) (readily available in many OS) to try things out locally.
 
@@ -192,7 +186,7 @@ http http://127.0.0.1:8000/hello/ "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGc
 
 ![HTTPie JWT Expired](https://simpleisbetterthancomplex.com/media/2018/12/jwt-expired.png)
 
-##### Refresh Token
+## Refresh Token
 
 To get a new **access token**, you should use the refresh token endpoint `/api/token/refresh/` posting the **refresh token**:
 
@@ -206,12 +200,9 @@ The return is a new **access token** that you should use in the subsequent reque
 
 The **refresh token** is valid for the next 24 hours. When it finally expires too, the user will need to perform a full authentication again using their username and password to get a new set of **access token** + **refresh token**.
 
-___
 
-#### What’s The Point of The Refresh Token?
+## What’s The Point of The Refresh Token?
 
 At first glance the **refresh token** may look pointless, but in fact it is necessary to make sure the user still have the correct permissions. If your **access token** have a long expire time, it may take longer to update the information associated with the token. That’s because the authentication check is done by cryptographic means, instead of querying the database and verifying the data. So some information is sort of cached.
 
 There is also a security aspect, in a sense that the **refresh token** only travel in the POST data. And the **access token** is sent via HTTP header, which may be logged along the way. So this also give a short window, should your **access token** be compromised.
-
-___
