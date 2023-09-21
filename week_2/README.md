@@ -12,7 +12,7 @@ The ToDo App API is a Django REST framework-based web service that allows users 
   - [Configuration](#configuration)
   - [Usage](#usage)
     - [Authentication](#authentication)
-    - [JWT(JSON Web Token) - split file]()
+    - [JWT(JSON Web Token) - split file](https://github.com/AGIZA-eg/alx-pre_course/blob/master/week_2/Learn_JWT.md)
   - [Endpoints](#endpoints)
     - [Get all tasks:](#get-all-tasks)
     - [Create a new task:](#create-a-new-task)
